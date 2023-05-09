@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets\favico\blink-favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/viplogin.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <title>Brief.ly | Enterprise URL Shortener, Branded URLs, Link Management</title>
+    
+</head>
+<body>
+    <header>
+      <div class="wrapper">
+        <div class="content-box">
+          <div class="logo">
+            <a href="index.html"><img src="img\Brief.ly.png" alt=""></a>
+          </div>
+          <nav>
+            <!-- <div class="logo">Logo</div> -->
+            <!-- <input type="checkbox" id="nav-toggle"> -->
+            <label for="nav-toggle" class="nav-toggle-label">&#9781;</label>
+            <ul class="menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="login.html" class="button signup" >📝 Sign Up</a></li>
+              <li><a href="login.html" class="button login" >👤 Login</a></li>
+            </ul>
+          </nav>          
+        </div>
+      </div>
+    </header>
+    <div class="loginContainer">
+        <div class="loginWrapper">
+            <div class="container" id="container">
+                <div class="form-container sign-up-container" >
+                    <form id="signup-form" method="post">
+                        <h1 class="h1 createAccount">Create Account</h1>
+                        <div class="social-container">
+                            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#" class="social"><i class="fab fa-github"></i></a>
+                        </div>
+                        
+                        <span>or use your email for registration</span>
+                        <input type="text" name="name" placeholder="Full Name" id="name"/>
+                        <input type="email" name="email" placeholder="Email" id="email" />
+                        <input type="password" name="password" placeholder="Password" id="password"/>
+                        <button type="submit" type="submit">Sign Up</button>
+                        <a href="#" class="ghost" id="signIn">Already Registerd? Sign In Here</a>
+                        
+                    </form>
+                </div>
+                <div class="form-container sign-in-container">
+                    <form method="POST" id="signin-form">
+                        <h1>Sign in</h1>
+                        <div class="social-container">
+                            <a href = "https://prickly-dove-knickers.cyclic.app/google/auth/google" class="social"><i class="fab fa-google-plus-g"></i></a>
+                            <a href = "https://github.com/login/oauth/authorize?client_id=cefb84d0ab8bbfdc2919&scope=user:email" class="social"><i class="fab fa-github"></i></a>
+                        </div>
+                        
+                        <span>or use your account</span>
+                        <input type="email" name="email" placeholder="Email" />
+                        <input type="password" name="password" placeholder="Password" />
+                        <a href="#">Forgot your password?</a>
+                        <button type="submit">Sign In</button>
+                        <a href="#" class="ghost" id="signUp">New Here? Sign Up Now</a>
+                        <a href="adminlogin.html">Login As Admin</a>
+                    </form>
+                </div>
+                <div class="overlay-container">
+                    <div class="overlay">
+                        <div class="overlay-panel overlay-left">
+                            <h1>Hello, Friend!</h1>
+                            <p>New User? Create an account and start Link Shortening with us</p>
+                        </div>
+                        <div class="overlay-panel overlay-right">
+                            <h1>Welcome Back!</h1>
+                            <p>Enter your login credentials and start Link Shortening with us</p>
+                            <!-- <button class="ghost" id="signUp">Sign Up</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="about" class="footersignup">
+        <div class="footer-wrapper">
+          <div class="footer-content displayNone">
+            <h4>Popular Links</h4>
+            <a href="#"><p>Anatomy of Short Link</p></a>
+            <a href="#"><p>Read Our Reviews</p></a>
+            <a href="#"><p>Watch Our Videos</p></a>
+            <a href="#"><p>Anatomy of Short Link</p></a>
+          </div>
+          <div class="footer-content displayNone">
+            <h4>Product</h4>
+            <a href="#services"><p>Features</p></a>
+            <a href="#pricing"><p>Pricing</p></a>
+            <a href="login.html"><p>Login</p></a>
+            <a href="login.html"><p>Sign Up</p></a>
+            <a href="#"><p>Quote Request</p></a>
+          </div>
+          <div class="footer-content displayNone">
+            <h4>Resources</h4>
+            <a href="#"><p>Api Documentation</p></a>
+            <a href="#"><p>Blog</p></a>
+            <a href="#"><p>Help Center</p></a>
+            <a href="#"><p>Case Studies</p></a>
+            <a href="#"><p>Enterprise Highlights</p></a>
+          </div>
+          <div class="footer-content displayNone">
+            <h4>Company</h4>
+            <a href="#"><p>About</p></a>
+            <a href="#"><p>Career</p></a>
+            <a href="#"><p>Customers</p></a>
+            <a href="#"><p>GDPR</p></a>
+            <a href="#"><p>Contact Us</p></a>
+          </div>
+          <div class="footer-content middle">
+            <h4>Download Our App</h4><br>
+            <div id="download">
+              <a id="playStoreIco" href="#"><img src="img\Daco_172464.png" alt=""></a><br>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a id="appStoreIco" href="#"><img src="img\pngwing.com (1).png" alt=""></a>
+            </div>
+            <h4>Contact Us</h4>
+            <a href="#"><u>contactus@brief.ly</u></a>
+          </div>
+        </div>
+      </footer>
+      <div class="lowerFooter">
+        &#169; Briefly | All Rights are Reserved&#174; | Terms And Services &#8482;<br>
+        Made With ❤️ By Masai Students
+      </div>
+
+
+
+
+
+</body>
+<script src="./src/viplogin.js"></script>
+</html>

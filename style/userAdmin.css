@@ -1,0 +1,36 @@
+tr>td:last-child{
+    background-color:  rgba(255, 255, 255, 0.14);
+    border-radius: 5px;
+    
+}
+tr>td:last-child:hover{
+    background-color: #020a16;
+    color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    
+}
+
+table{
+    margin:50px auto;
+    width: 80%;
+    text-align: center;
+}
+th{
+    background-color:  #726DB0;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+tbody>tr:nth-child(even){
+    background-color: rgba(134, 231, 238, 0.24);
+    
+}
+tbody>tr:nth-child(odd){
+ 
+    background-color: #020a1677;
+    color: rgba(255, 228, 196, 0.527);
+}
+tbody>tr:nth-child(even):hover{
+    background-color: #1ca5335d;
+    color: rgb(201, 171, 171);
+}
