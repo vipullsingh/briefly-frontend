@@ -1,4 +1,4 @@
-const baseUrl = "https://prickly-dove-knickers.cyclic.app/";
+const baseUrl = "https://beige-swordfish-wear.cyclic.app/";
 const userId = localStorage.getItem("user");
 
 // nav elements

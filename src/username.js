@@ -50,7 +50,7 @@ window.addEventListener("load",()=>{
 })
 
 async function logout(){
-    let result = await fetch("https://prickly-dove-knickers.cyclic.app/user/logout")
+    let result = await fetch("https://beige-swordfish-wear.cyclic.app/user/logout")
     alert(result.msg) 
     console.log(result.msg) 
 }
