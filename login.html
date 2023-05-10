@@ -13,6 +13,49 @@
 <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Poppins:wght@700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
+    <style>
+      .dropdown {
+      color: white;;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdown span {
+      color: white;;
+      cursor: pointer;
+    }
+    
+    .dropdown .dropdown-menu {
+      display: none;
+      color: white;;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 1;
+      background-color: #2D365C;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      border: 1px solid #ccc;
+      border-top: none;
+    }
+    
+    .dropdown .dropdown-menu li a {
+      display: block;
+      color: white;;
+      padding: 10px;
+      text-decoration: none;
+    }
+    
+    
+    .dropdown .dropdown-menu li a:hover {
+      background-color: #2D365C;
+    }
+    
+    .dropdown.open .dropdown-menu {
+      display: block;
+    }
+    </style>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="style/viplogin.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
