@@ -585,3 +585,13 @@ footer p{
     text-align: center;
   }
 }
+@media (max-width: 790px){
+  .banner-col-2{
+    width: 70%;
+  }
+}
+@media (max-width: 570px){
+  .banner-col-2{
+    width: 100%;
+  }
+}
