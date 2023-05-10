@@ -291,3 +291,14 @@ main {
         display: inline;
     }
 }
+@media (max-width: 580px){
+    .signup1{
+        width: 30%;
+    }
+    button{
+        width: 30% ;
+    }
+    .usernamelogout{
+        font-size: x-small;
+    }
+}
