@@ -58,6 +58,7 @@ shrink_form.addEventListener("submit",  (event) => {
     .catch((err)=> console.log(err))
 
 
+    displayURLs()
 
     swal({
         title: "Shrinked Successfully!! ✅",
@@ -65,9 +66,14 @@ shrink_form.addEventListener("submit",  (event) => {
         icon: "success",
         button: "Yay!🎉",
       })
+      .then((value) => {
+        if (value) {
+          window.location.href = "./dashboard.html";
+        }
+      });
     // alert("Your URL shrinked Successfully!!");
     full_url_btn.innerHTML = "Shrink";
-    displayURLs()
+    // location.reload()
 })
 
 // alert box
