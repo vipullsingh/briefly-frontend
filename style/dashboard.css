@@ -279,9 +279,15 @@ main {
     .main-graph-chart>div {
         flex-direction: column;
     }
-
+    
     .main-graph-chart>div>div {
         /* border: 1px solid black; */
         width: 90%;
+    }
+}
+
+@media (max-width: 790px){
+    .signup1{
+        display: inline;
     }
 }
