@@ -609,47 +609,7 @@ footer p{
   }
 }
 
-.dropdown {
-  color: white;;
-  position: relative;
-  display: inline-block;
-}
 
-.dropdown span {
-  color: white;;
-  cursor: pointer;
-}
-
-.dropdown .dropdown-menu {
-  display: none;
-  color: white;;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1;
-  background-color: #2D365C;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  border: 1px solid #ccc;
-  border-top: none;
-}
-
-.dropdown .dropdown-menu li a {
-  display: block;
-  color: white;;
-  padding: 10px;
-  text-decoration: none;
-}
-
-
-.dropdown .dropdown-menu li a:hover {
-  background-color: #2D365C;
-}
-
-.dropdown.open .dropdown-menu {
-  display: block;
-}
 @media (max-width: 410px){
   .features .features1 .features2 .features3 .features4 .features5{
     width: 125px;
