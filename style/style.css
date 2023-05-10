@@ -589,9 +589,19 @@ footer p{
   .banner-col-2{
     width: 70%;
   }
+  .services-list div{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .services-list1 div{
+    margin: 10px;
+    width: 80%;
+  }
+
 }
 @media (max-width: 570px){
   .banner-col-2{
     width: 100%;
   }
 }
+
