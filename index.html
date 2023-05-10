@@ -28,7 +28,18 @@
           <nav>
             <!-- <div class="logo">Logo</div> -->
             <!-- <input type="checkbox" id="nav-toggle"> -->
-            <label for="nav-toggle" class="nav-toggle-label">&#9781;</label>
+            <!-- <label for="nav-toggle" class="nav-toggle-label">&#9781;</label> -->
+            <div class="dropdown">
+              <span class="mobilemenu">&#9776;</span>
+              <ul class="dropdown-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Sign In</a></li>
+              </ul>
+            </div>
+            
             <ul class="menu">
               <li><a href="index.html">Home</a></li>
               <li><a href="#services">Services</a></li>
@@ -247,4 +258,13 @@
       Made With ❤️ By Masai Students
     </div>
 </body>
+<script>
+  const dropdown = document.querySelector('.dropdown');
+const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+
+dropdown.addEventListener('click', function() {
+  dropdown.classList.toggle('open');
+});
+
+</script>
 </html>
