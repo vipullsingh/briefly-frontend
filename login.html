@@ -21,28 +21,39 @@
     
 </head>
 <body>
-    <header>
-      <div class="wrapper">
-        <div class="content-box">
-          <div class="logo">
-            <a href="index.html"><img src="img\Brief.ly.png" alt=""></a>
-          </div>
-          <nav>
-            <!-- <div class="logo">Logo</div> -->
-            <!-- <input type="checkbox" id="nav-toggle"> -->
-            <label for="nav-toggle" class="nav-toggle-label">&#9781;</label>
-            <ul class="menu">
+  <header>
+    <div class="wrapper">
+      <div class="content-box">
+        <div class="logo">
+          <a href="index.html"><img src="img\Brief.ly.png" alt=""></a>
+        </div>
+        <nav>
+          <!-- <div class="logo">Logo</div> -->
+          <!-- <input type="checkbox" id="nav-toggle"> -->
+          <!-- <label for="nav-toggle" class="nav-toggle-label">&#9781;</label> -->
+          <div class="dropdown">
+            <span class="mobilemenu">&#9776;</span>
+            <ul class="dropdown-menu">
               <li><a href="index.html">Home</a></li>
               <li><a href="#services">Services</a></li>
               <li><a href="#pricing">Pricing</a></li>
               <li><a href="#about">About</a></li>
-              <li><a href="login.html" class="button signup" >📝 Sign Up</a></li>
-              <li><a href="login.html" class="button login" >👤 Login</a></li>
+              <li><a href="login.html">Sign In</a></li>
             </ul>
-          </nav>          
-        </div>
+          </div>
+          
+          <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="login.html" class="button signup">📝 Sign Up</a></li>
+            <li><a href="login.html" class="button login">👤 Login</a></li>
+          </ul>
+        </nav>          
       </div>
-    </header>
+    </div>
+  </header>
     <div class="loginContainer">
         <div class="loginWrapper">
             <div class="container" id="container">
@@ -150,5 +161,14 @@
 
 
 </body>
+<script>
+  const dropdown = document.querySelector('.dropdown');
+const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+
+dropdown.addEventListener('click', function() {
+  dropdown.classList.toggle('open');
+});
+
+</script>
 <script src="./src/viplogin.js"></script>
 </html>
