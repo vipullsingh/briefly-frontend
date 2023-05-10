@@ -279,7 +279,8 @@ nav {
     border-image: linear-gradient(to bottom, #f00, #00f) 1; 
     padding: 3px;
     background-color: #132B3E;
-    width:125px;    height: 150px;
+    width:125px;    
+    height: 125px;
     border: 2px solid ;
     border-image: linear-gradient(to bottom, #f00, #00f) 1; 
     display: flex;
@@ -290,7 +291,7 @@ nav {
     margin: auto;
     margin-bottom: 15px;
     width:125px;
-    height: 150px;
+    height: 125px;
     background-color: #132B3E;
     border: 2px solid ;
     border-image: linear-gradient(to bottom, rgb(0, 255, 17), rgb(120, 72, 33)) 1; 
@@ -322,7 +323,7 @@ nav {
   margin: auto;
   margin-bottom: 15px;
   width:125px;
-  height: 150px;
+  height: 125px;
   border: 2px solid ;
   border-image: linear-gradient(to bottom, rgb(13, 168, 62), rgb(8, 5, 91)) 1;
   display: flex;background-color: #132B3E;
@@ -339,7 +340,7 @@ nav {
     margin: auto;
     margin-bottom: 15px;
     width:125px;
-    height: 150px;
+    height: 125px;
     background-color: #132B3E;
     border: 2px solid ;
     border-image: linear-gradient(to bottom, rgb(233, 87, 76), rgb(56, 27, 182)) 1;
@@ -357,7 +358,7 @@ nav {
     margin: auto;
     margin-bottom: 15px;
     width:125px;
-    height: 150px;
+    height: 125px;
     background-color: #132B3E;
     border: 2px solid ;
     border-image: linear-gradient(to bottom, rgb(0, 255, 17), rgb(120, 72, 33)) 1;
@@ -375,7 +376,7 @@ nav {
     margin: auto;
     margin-bottom: 15px;
     width:125px;
-    height: 150px;
+    height: 125px;
     background-color: #132B3E;
     border: 2px solid ;
     border-image: linear-gradient(to bottom, rgb(13, 168, 62), rgb(8, 5, 91)) 1;
