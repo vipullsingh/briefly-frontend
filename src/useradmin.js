@@ -21,8 +21,13 @@ let tbody = document.getElementById("tbody");
                     if (res.ok) {
                         let r = res.json();
 
-
-                        alert("delete successfully");
+                        swal({
+                            title: "Deleted Successfully 🗑️",
+                            icon: "success",
+                            button: "OK",
+                          });
+                          
+                        // alert("delete successfully");
                         window.location.reload();
 
 

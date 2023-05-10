@@ -59,8 +59,13 @@ shrink_form.addEventListener("submit",  (event) => {
 
 
 
-
-    alert("Your URL shrinked Successfully!!");
+    swal({
+        title: "Shrinked Successfully!! ✅",
+        text: "Now You Can use the shortened URL ",
+        icon: "success",
+        button: "Yay!🎉",
+      })
+    // alert("Your URL shrinked Successfully!!");
     full_url_btn.innerHTML = "Shrink";
     displayURLs()
 })
