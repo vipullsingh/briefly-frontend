@@ -302,3 +302,17 @@ main {
         font-size: x-small;
     }
 }
+@media (max-width: 450px){
+    .signup1{
+        width: 30%;
+    }
+    button{
+        width: 30% ;
+    }
+    nav{
+        font-size: xx-small;
+    }
+    .logo img{
+        width: 80%;
+    }
+}
