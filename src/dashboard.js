@@ -133,7 +133,7 @@ function displayURLs() {
                             if (res.msg == "URL Deleted") {
                                 // alert("URL has been deleted")
                                 swal({
-                                    title: "Deleted Successfull! ✅",,
+                                    title: "Deleted Successfull! ✅",
                                     icon: "success",
                                   })
                                 // displayStats(userInfo)
