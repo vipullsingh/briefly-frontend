@@ -114,7 +114,12 @@ function displayURLs() {
             copy_btn.forEach(btn => {
                 btn.addEventListener('click', (e) => {
                     navigator.clipboard.writeText(e.target.alt);
-                    alert("Link copied to clipboard")
+                    // alert("Link copied to clipboard")
+                    swal({
+                        title: "Copied to Clipboard! ✅",
+                        text: "Now You Can use the shortened URL ",
+                        icon: "success",
+                      })
                 })
             });
 
