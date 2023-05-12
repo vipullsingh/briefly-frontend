@@ -10,35 +10,35 @@ const totalClicks = document.getElementById('all-clicks')
 const url_list_box = document.getElementById("url-list-box");
 
 // making a get request to server for getting user information
-// async function getUserInfo() {
-//     const url = window.location.href;
-//     let userid = url.split("?")[1];
-//     let user;
-//     if (userid) {
-//         user = userid.split("=")[1];
-//     }
-//     if (user) {
-//         localStorage.setItem("user", user);
-//         let userId = user;
-//         const response = await fetch(`${baseUrl}/user/${userId}`);
-//         const userInfo = await response.json();
-//         // console.log(userInfo);
-//         displayStats(userInfo);
-//     }
-//     else {
-//         let userId = localStorage.getItem("user");
-//         const response = await fetch(`${baseUrl}/user/${userId}`);
-//         const userInfo = await response.json();
-//         // console.log(userInfo);
-//         displayStats(userInfo);
-//     }
-// }
-// getUserInfo();
+async function getUserInfo() {
+    const url = window.location.href;
+    let userid = url.split("?")[1];
+    let user;
+    if (userid) {
+        user = userid.split("=")[1];
+    }
+    if (user) {
+        localStorage.setItem("user", user);
+        let userId = user;
+        const response = await fetch(`${baseUrl}/user/${userId}`);
+        const userInfo = await response.json();
+        // console.log(userInfo);
+        displayStats(userInfo);
+    }
+    else {
+        let userId = localStorage.getItem("user");
+        const response = await fetch(`${baseUrl}/user/${userId}`);
+        const userInfo = await response.json();
+        // console.log(userInfo);
+        displayStats(userInfo);
+    }
+}
+getUserInfo();
 
 const user = localStorage.getItem("user")
-user = user.split('&')[0]
+user = user.split('&')[0];
 
-const id = localStorage.getItem("LoggedID" || user)
+const id = localStorage.getItem("LoggedID") || user;
 
 
 shrink_form.addEventListener("submit", (event) => {
@@ -102,13 +102,7 @@ function displayURLs() {
             copy_btn.forEach(btn => {
                 btn.addEventListener('click', (e) => {
                     navigator.clipboard.writeText(e.target.alt);
-                    // alert("Link copied to clipboard")
-                    swal({
-                        title: "Copied To Clipboard!",
-                        text: "You can now Paste🗒️ the Link Anywhere!",
-                        icon: "success",
-                        button: "Yay!🎉",
-                      })
+                    alert("Link copied to clipboard")
                 })
             });
 
@@ -120,14 +114,9 @@ function displayURLs() {
                         .then(res => {
                             console.log(res)
                             if (res.msg == "URL Deleted") {
-                                swal({
-                                    title: "Link Deleted Successfull!",
-                                    icon: "success"
-                                  }).then((value) => {
-                                    if (value) {
-                                      location.reload()
-                                    }
-                                  });
+                                alert("URL has been deleted")
+                                // displayStats(userInfo)
+                                location.reload()
                             }
                         })
 
