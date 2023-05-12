@@ -10,35 +10,44 @@ const totalClicks = document.getElementById('all-clicks')
 const url_list_box = document.getElementById("url-list-box");
 
 // making a get request to server for getting user information
-async function getUserInfo() {
-    const url = window.location.href;
-    let userid = url.split("?")[1];
-    let user;
-    if (userid) {
-        user = userid.split("=")[1];
-    }
-    if (user) {
-        localStorage.setItem("user", user);
-        let userId = user;
-        const response = await fetch(`${baseUrl}/user/${userId}`);
-        const userInfo = await response.json();
-        // console.log(userInfo);
-        displayStats(userInfo);
-    }
-    else {
-        let userId = localStorage.getItem("user");
-        const response = await fetch(`${baseUrl}/user/${userId}`);
-        const userInfo = await response.json();
-        // console.log(userInfo);
-        displayStats(userInfo);
-    }
+// async function getUserInfo() {
+//     const url = window.location.href;
+//     let userid = url.split("?")[1];
+//     let user;
+//     if (userid) {
+//         user = userid.split("=")[1];
+//     }
+//     if (user) {
+//         localStorage.setItem("user", user);
+//         let userId = user;
+//         const response = await fetch(`${baseUrl}/user/${userId}`);
+//         const userInfo = await response.json();
+//         // console.log(userInfo);
+//         displayStats(userInfo);
+//     }
+//     else {
+//         let userId = localStorage.getItem("user");
+//         const response = await fetch(`${baseUrl}/user/${userId}`);
+//         const userInfo = await response.json();
+//         // console.log(userInfo);
+//         displayStats(userInfo);
+//     }
+// }
+// getUserInfo();
+
+// const user = localStorage.getItem("user")
+// user = user.split('&')[0];
+
+// const userrid = localStorage.getItem("LoggedID") || user;
+// console.log(id)
+
+if(localStorage.getItem("LoggedID")){
+    var userrid = localStorage.getItem("LoggedID")
 }
-getUserInfo();
-
-const user = localStorage.getItem("user")
-user = user.split('&')[0];
-
-const id = localStorage.getItem("LoggedID") || user;
+else{
+    const user = localStorage.getItem("user")
+    var userrid = user.split('&')[0];
+}
 
 
 shrink_form.addEventListener("submit", (event) => {
@@ -51,7 +60,7 @@ shrink_form.addEventListener("submit", (event) => {
             "Content-Type": "application/json",
 
         },
-        body: JSON.stringify({ longurl, id })
+        body: JSON.stringify({ longurl, id:userrid })
     })
         .then(request => request.json())
         .then(request => console.log(request))
@@ -62,13 +71,13 @@ shrink_form.addEventListener("submit", (event) => {
 
     alert("Your URL shrinked Successfully!!");
     full_url_btn.innerHTML = "Shrink";
-    displayURLs()
+    displayURLs(userrid)
 })
 
 // alert box
 
 
-function displayURLs() {
+function displayURLs(id) {
     fetch(`${baseUrl}/url/${id}`)
         .then(res => res.json())
         .then(res => {
@@ -132,4 +141,4 @@ function displayURLs() {
 }
 
 
-displayURLs()
+displayURLs(userrid)
