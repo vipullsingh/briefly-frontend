@@ -25,26 +25,20 @@ window.addEventListener("load",()=>{
         logout.style.display = "inline-block"
     }
     else{
-        window.location.href = "./login.html"
-        signedInName.textContent = ''
-      
-        logout.style.display = "none"
+            window.location.href = "./login.html"
     }
+
 
 
     
     logout.addEventListener("click", () => {
-      
-        room = null;
-        localStorage.removeItem("LoggedName")
-      
+        localStorage.clear()        
         signedInName.textContent = "";
-   
         logout.style.display = "none"
         logout()
-        window.location.href = "./login.html"
+        room = null;
+        // window.location.href = "./login.html"
         
-        logout.style.display = "none"
   
     })
 })
