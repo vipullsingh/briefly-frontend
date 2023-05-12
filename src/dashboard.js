@@ -49,6 +49,7 @@ else{
     var userrid = user.split('&')[0];
 }
 
+console.log(userrid)
 
 shrink_form.addEventListener("submit", (event) => {
     full_url_btn.innerHTML = `<i class="fa fa-spinner fa-spin"></i>`;
