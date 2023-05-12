@@ -9,11 +9,12 @@ window.addEventListener("load",()=>{
 
     const urlParams = new URLSearchParams(window.location.search);
     const room = urlParams.get('name')
+    const id = urlParams.get('id')
+
     console.log(room);
     
     if(room!==null){
-
-            
+           
             signedInName.textContent = `${room}`
           
             logout.style.display = "inline-block"

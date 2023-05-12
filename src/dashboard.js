@@ -1,9 +1,8 @@
-
 // shrink form
 const shrink_form = document.getElementById("shortener-input");
 const shrink_full_url = document.getElementById("full-url");
 const full_url_btn = document.getElementById("full-url-btn");
-const baseUrl = "https://beige-swordfish-wear.cyclic.app"
+const baseUrl = "https://prickly-dove-knickers.cyclic.app"
 const linkCount = document.getElementById('all-links')
 const totalClicks = document.getElementById('all-clicks')
 
@@ -11,34 +10,35 @@ const totalClicks = document.getElementById('all-clicks')
 const url_list_box = document.getElementById("url-list-box");
 
 // making a get request to server for getting user information
-async function getUserInfo() {
-    const url = window.location.href;
-    let userid = url.split("?")[1];
-    let user;
-    if (userid) {
-        user = userid.split("=")[1];
-    }
-    if (user) {
-        localStorage.setItem("user", user);
-        let userId = user;
-        const response = await fetch(`${baseUrl}/user/${userId}`);
-        const userInfo = await response.json();
-        // console.log(userInfo);
-        displayStats(userInfo);
-    }
-    else {
-        let userId = localStorage.getItem("user");
-        const response = await fetch(`${baseUrl}/user/${userId}`);
-        const userInfo = await response.json();
-        // console.log(userInfo);
-        displayStats(userInfo);
-    }
-}
-getUserInfo();
+// async function getUserInfo() {
+//     const url = window.location.href;
+//     let userid = url.split("?")[1];
+//     let user;
+//     if (userid) {
+//         user = userid.split("=")[1];
+//     }
+//     if (user) {
+//         localStorage.setItem("user", user);
+//         let userId = user;
+//         const response = await fetch(`${baseUrl}/user/${userId}`);
+//         const userInfo = await response.json();
+//         // console.log(userInfo);
+//         displayStats(userInfo);
+//     }
+//     else {
+//         let userId = localStorage.getItem("user");
+//         const response = await fetch(`${baseUrl}/user/${userId}`);
+//         const userInfo = await response.json();
+//         // console.log(userInfo);
+//         displayStats(userInfo);
+//     }
+// }
+// getUserInfo();
 
+const user = localStorage.getItem("user")
+user = user.split('&')[0]
 
-
-const id = localStorage.getItem("LoggedID")
+const id = localStorage.getItem("LoggedID" || user)
 
 
 shrink_form.addEventListener("submit", (event) => {
@@ -57,13 +57,10 @@ shrink_form.addEventListener("submit", (event) => {
         .then(request => console.log(request))
         .catch((err) => console.log(err))
 
-        swal({
-            title: "Link Shrinked Successfully!",
-            icon: "success"
-          })
 
 
-    // alert("Your URL shrinked Successfully!!");
+
+    alert("Your URL shrinked Successfully!!");
     full_url_btn.innerHTML = "Shrink";
     displayURLs()
 })
@@ -123,7 +120,6 @@ function displayURLs() {
                         .then(res => {
                             console.log(res)
                             if (res.msg == "URL Deleted") {
-                                // alert("URL has beem deleted")
                                 swal({
                                     title: "Link Deleted Successfull!",
                                     icon: "success"
@@ -132,8 +128,6 @@ function displayURLs() {
                                       location.reload()
                                     }
                                   });
-                                // displayStats(userInfo)
-                                // location.reload()
                             }
                         })
 
