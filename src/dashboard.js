@@ -170,16 +170,16 @@ async function getUserInfo() {
     }
     if (user) {
         localStorage.setItem("user", user);
-        let userId = user;
-        const response = await fetch(`${baseUrl}/user/${userId}`);
-        const userInfo = await response.json();
+        // let userId = user;
+        // const response = await fetch(`${baseUrl}/user/${userId}`);
+        // const userInfo = await response.json();
         // console.log(userInfo);
         // displayStats(userInfo);
     }
     else {
         let userId = localStorage.getItem("user");
-        const response = await fetch(`${baseUrl}/user/${userId}`);
-        const userInfo = await response.json();
+        // const response = await fetch(`${baseUrl}/user/${userId}`);
+        // const userInfo = await response.json();
         // console.log(userInfo);
         // displayStats(userInfo);
     }
@@ -192,8 +192,11 @@ if(localStorage.getItem("LoggedID")){
 }
 else{
     const user = localStorage.getItem("user")
-    var userrid = user.split('&')[0];
+    if(user)
+        var userrid = user.split('&')[0];
 }
+
+console.log(userrid)
 
 
 shrink_form.addEventListener("submit", (event) => {
@@ -206,7 +209,7 @@ shrink_form.addEventListener("submit", (event) => {
             "Content-Type": "application/json",
 
         },
-        body: JSON.stringify({ longurl, userrid })
+        body: JSON.stringify({ longurl, id:userrid })
     })
         .then(request => request.json())
         .then(request => console.log(request))
@@ -217,13 +220,13 @@ shrink_form.addEventListener("submit", (event) => {
 
     alert("Your URL shrinked Successfully!!");
     full_url_btn.innerHTML = "Shrink";
-    displayURLs()
+    displayURLs(userrid)
 })
 
 // alert box
 
 
-function displayURLs() {
+function displayURLs(id) {
     fetch(`${baseUrl}/url/${id}`)
         .then(res => res.json())
         .then(res => {
@@ -287,4 +290,4 @@ function displayURLs() {
 }
 
 
-displayURLs()
+displayURLs(userrid)

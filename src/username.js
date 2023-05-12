@@ -94,23 +94,32 @@ window.addEventListener("load",()=>{
       
         // localStorage.removeItem("LoggedName")
         localStorage.clear()
+        window.location.href = "./login.html"
         
         room = null;
         signedInName.textContent = "";
    
         logout.style.display = "none"
         logout()
-        window.location.href = "./login.html"
         
         logout.style.display = "none"
   
     })
 })
 
-async function logout(){
-    let result = await fetch("https://prickly-dove-knickers.cyclic.app/user/logout")
-    alert(result.msg) 
-    console.log(result.msg) 
-}
+// async function logout(){
+//     let result = await fetch("https://prickly-dove-knickers.cyclic.app/user/logout")
+//     alert(result.msg) 
+//     console.log(result.msg) 
+// }
 
+ function logout(){
+    fetch("https://beige-swordfish-wear.cyclic.app/user/logout")
+    .then(res=>res.json())
+    .then(res=>{
+        console.log(res)
+        alert(res.msg) 
+        console.log(res.msg) 
+    })
+}
 
