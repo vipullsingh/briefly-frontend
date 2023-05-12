@@ -37,16 +37,19 @@ window.addEventListener("load",()=>{
         logout.style.display = "none"
         logout()
         room = null;
-        // window.location.href = "./login.html"
-        
+        // window.location.href = "./login.html"       
   
     })
 })
 
-async function logout(){
-    let result = await fetch("https://beige-swordfish-wear.cyclic.app/user/logout")
-    alert(result.msg) 
-    console.log(result.msg) 
+ function logout(){
+    fetch("https://beige-swordfish-wear.cyclic.app/user/logout")
+    .then(res=>res.json())
+    .then(res=>{
+        console.log(res)
+        alert(res.msg) 
+        console.log(res.msg) 
+    })
 }
 
 

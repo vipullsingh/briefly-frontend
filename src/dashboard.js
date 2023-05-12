@@ -3,7 +3,7 @@
 const shrink_form = document.getElementById("shortener-input");
 const shrink_full_url = document.getElementById("full-url");
 const full_url_btn = document.getElementById("full-url-btn");
-const baseUrl = "https://beige-swordfish-wear.cyclic.app/"
+const baseUrl = "https://prickly-dove-knickers.cyclic.app"
 const linkCount = document.getElementById('all-links')
 const totalClicks = document.getElementById('all-clicks')
 
@@ -40,40 +40,28 @@ getUserInfo();
 
 const id = localStorage.getItem("LoggedID")
 
-// shrink url
-shrink_form.addEventListener("submit",  (event) => {
+
+shrink_form.addEventListener("submit", (event) => {
     full_url_btn.innerHTML = `<i class="fa fa-spinner fa-spin"></i>`;
     event.preventDefault();
     const longurl = shrink_full_url.value;
-    const request =  fetch(`${baseUrl}/url/assign`, {
+    const request = fetch(`${baseUrl}/url/assign`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-           
+
         },
-        body: JSON.stringify({ longurl , id })
+        body: JSON.stringify({ longurl, id })
     })
-    .then(request => request.json())
-    .then(request=>console.log(request))
-    .catch((err)=> console.log(err))
+        .then(request => request.json())
+        .then(request => console.log(request))
+        .catch((err) => console.log(err))
 
 
 
 
-    swal({
-        title: "Shrinked Successfully!! ✅",
-        text: "Now You Can use the shortened URL ",
-        icon: "success",
-        button: "Yay!🎉",
-      })
-      .then((value) => {
-        if (value) {
-          window.location.href = "./dashboard.html";
-        }
-      });
-    // alert("Your URL shrinked Successfully!!");
+    alert("Your URL shrinked Successfully!!");
     full_url_btn.innerHTML = "Shrink";
-    // location.reload()
     displayURLs()
 })
 
@@ -116,9 +104,10 @@ function displayURLs() {
                     navigator.clipboard.writeText(e.target.alt);
                     // alert("Link copied to clipboard")
                     swal({
-                        title: "Copied to Clipboard! ✅",
-                        text: "Now You Can use the shortened URL ",
+                        title: "Copied To Clipboard!",
+                        text: "You can now Paste🗒️ the Link Anywhere!",
                         icon: "success",
+                        button: "Yay!🎉",
                       })
                 })
             });
@@ -131,13 +120,17 @@ function displayURLs() {
                         .then(res => {
                             console.log(res)
                             if (res.msg == "URL Deleted") {
-                                // alert("URL has been deleted")
+                                // alert("URL has beem deleted")
                                 swal({
-                                    title: "Deleted Successfull! ✅",
-                                    icon: "success",
-                                  })
+                                    title: "Link Deleted Successfull!",
+                                    icon: "success"
+                                  }).then((value) => {
+                                    if (value) {
+                                      location.reload()
+                                    }
+                                  });
                                 // displayStats(userInfo)
-                                location.reload()
+                                // location.reload()
                             }
                         })
 
