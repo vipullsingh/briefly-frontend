@@ -218,7 +218,17 @@ shrink_form.addEventListener("submit", (event) => {
 
 
 
-    alert("Your URL shrinked Successfully!!");
+    // alert("Your URL shrinked Successfully!!");
+    swal({
+        title: "Shrinked Successfully!! ✅",
+        text: "You can now access short link in Dashboard!",
+        icon: "success",
+        button: "Yay!🎉",
+      }).then((value) => {
+        if (value) {
+          location.reload();
+        }
+      });
     full_url_btn.innerHTML = "Shrink";
     displayURLs(userrid)
 })
@@ -272,9 +282,17 @@ function displayURLs(id) {
                         .then(res => {
                             console.log(res)
                             if (res.msg == "URL Deleted") {
-                                alert("URL has beem deleted")
-                                // displayStats(userInfo)
-                                location.reload()
+                                // alert("URL has beem deleted")
+                                // // displayStats(userInfo)
+                                // location.reload()
+                                swal({
+                                    title: "Delted Successfully!",
+                                    icon: "success",
+                                  }).then((value) => {
+                                    if (value) {
+                                      window.location.href = "./dashboard.html";
+                                    }
+                                  });
                             }
                         })
 
