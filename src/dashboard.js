@@ -131,7 +131,11 @@ function displayURLs() {
                         .then(res => {
                             console.log(res)
                             if (res.msg == "URL Deleted") {
-                                alert("URL has been deleted")
+                                // alert("URL has been deleted")
+                                swal({
+                                    title: "Deleted Successfull! ✅",,
+                                    icon: "success",
+                                  })
                                 // displayStats(userInfo)
                                 location.reload()
                             }
