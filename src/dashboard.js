@@ -3,7 +3,7 @@
 const shrink_form = document.getElementById("shortener-input");
 const shrink_full_url = document.getElementById("full-url");
 const full_url_btn = document.getElementById("full-url-btn");
-const baseUrl = "https://prickly-dove-knickers.cyclic.app"
+const baseUrl = "https://beige-swordfish-wear.cyclic.app"
 const linkCount = document.getElementById('all-links')
 const totalClicks = document.getElementById('all-clicks')
 
