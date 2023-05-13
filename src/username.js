@@ -67,6 +67,8 @@ window.addEventListener("load",()=>{
     const urlParams = new URLSearchParams(window.location.search);
     const room = urlParams.get('name')
     console.log(room);
+
+
     
     if(room!=null){
 
@@ -82,7 +84,7 @@ window.addEventListener("load",()=>{
         logout.style.display = "inline-block"
     }
     else{
-        window.location.href = "./login.html"
+        // window.location.href = "./login.html"
         signedInName.textContent = ''
       
         logout.style.display = "none"
