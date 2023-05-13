@@ -160,8 +160,13 @@ const totalClicks = document.getElementById('all-clicks')
 // url list elements
 const url_list_box = document.getElementById("url-list-box");
 
+
+const urlParams = new URLSearchParams(window.location.search);
+    const room = urlParams.get('name')
+
 // making a get request to server for getting user information
 async function getUserInfo() {
+
     const url = window.location.href;
     let userid = url.split("?")[1];
     let user;
