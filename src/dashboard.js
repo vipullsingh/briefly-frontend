@@ -293,11 +293,7 @@ function displayURLs(id) {
                                 swal({
                                     title: "Delted Successfully!",
                                     icon: "success",
-                                  }).then((value) => {
-                                    if (value) {
-                                      window.location.href = "./dashboard.html";
-                                    }
-                                  });
+                                  })
                             }
                         })
 
