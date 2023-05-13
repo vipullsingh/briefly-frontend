@@ -84,7 +84,7 @@ window.addEventListener("load",()=>{
         logout.style.display = "inline-block"
     }
     else{
-        // window.location.href = "./login.html"
+        window.location.href = "./login.html"
         signedInName.textContent = ''
       
         logout.style.display = "none"
