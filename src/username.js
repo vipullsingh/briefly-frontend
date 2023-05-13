@@ -68,7 +68,7 @@ window.addEventListener("load",()=>{
     const room = urlParams.get('name')
     console.log(room);
     
-    if(room!==null){
+    if(room!=null){
 
             
             signedInName.textContent = `${room}`
