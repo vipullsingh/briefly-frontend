@@ -294,7 +294,7 @@ function displayURLs(id) {
                                 // // displayStats(userInfo)
                                 // location.reload()
                                 swal({
-                                    title: "Delted Successfully!",
+                                    title: "Deleted Successfully!",
                                     icon: "success",
                                   }).then((value) => {
                                     if (value) {

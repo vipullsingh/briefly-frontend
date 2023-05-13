@@ -91,7 +91,7 @@ function displayStats(userInfo) {
                     if (res.msg == "URL Deleted") {
                         // alert("URL has been deleted")
                         swal({
-                            title: "Link Deleted Successfull!",
+                            title: "Link Deleted Successfully!",
                             icon: "success"
                           }).then((value) => {
                             if (value) {
