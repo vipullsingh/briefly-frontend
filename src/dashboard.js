@@ -293,7 +293,11 @@ function displayURLs(id) {
                                 swal({
                                     title: "Delted Successfully!",
                                     icon: "success",
-                                  })
+                                  }).then((value) => {
+                                    if (value) {
+                                      location.reload();
+                                    }
+                                  });
                             }
                         })
 
