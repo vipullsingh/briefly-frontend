@@ -160,14 +160,11 @@ const totalClicks = document.getElementById('all-clicks')
 // url list elements
 const url_list_box = document.getElementById("url-list-box");
 
-
-const urlParams = new URLSearchParams(window.location.search);
-    const room = urlParams.get('name')
-
 // making a get request to server for getting user information
 async function getUserInfo() {
-
     const url = window.location.href;
+    let LoggedName = url.split("&")[1].split("=")[1].replace("%20"," ");
+    localStorage.setItem("LoggedName",LoggedName)
     let userid = url.split("?")[1];
     let user;
     if (userid) {
@@ -175,6 +172,7 @@ async function getUserInfo() {
     }
     if (user) {
         localStorage.setItem("user", user);
+        localStorage.setItem("LoggedID",LoggedID)
         // let userId = user;
         // const response = await fetch(`${baseUrl}/user/${userId}`);
         // const userInfo = await response.json();

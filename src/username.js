@@ -64,7 +64,8 @@ window.addEventListener("load",()=>{
     let signupBtn = document.getElementById("signUpBtn")
     let logout = document.getElementById("logOutBtn")
 
-    
+    const urlParams = new URLSearchParams(window.location.search);
+    const room = urlParams.get('name')
     console.log(room);
 
 
