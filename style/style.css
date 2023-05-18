@@ -419,6 +419,9 @@ nav {
   color : #132B3E;
 }
 .services-list{
+  font-size: x-large;
+  font-weight: bolder;
+  font-family: monospace;
   display: flex;
   justify-content: space-evenly;
   /* margin-top: 50px; */
@@ -458,6 +461,7 @@ nav {
   /* display: block; */
 }
 .services-list1{
+  font-family: monospace;
   display: flex;
   justify-content: space-evenly;
   /* margin-top: 50px; */
